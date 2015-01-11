@@ -1,0 +1,15 @@
+{
+  "name": "skeletonJS",
+  "version": "0.0.1",
+  "bin": {
+    "verstack": "bin/verstac"
+  },
+  "dependencies": {
+    "nomnom": "*",
+    "underscore": "*",
+    "async": "*",
+    "prompt": "*",
+    "fs-extra": "*"
+  },
+  "devDependencies": {}
+}

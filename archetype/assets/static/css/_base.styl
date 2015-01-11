@@ -1,0 +1,158 @@
+body
+  padding: 0
+  margin: 0
+  background: main-background
+  font: 400 14px/1.5 Tahoma,Verdana,sans-serif
+  color: #333
+
+.columnLayout
+  margin: 0 auto !important
+  overflow: hidden
+
+// Margins
+
+.margin
+  margin: margin-size !important
+
+.margin-left
+  margin-left: margin-size !important
+
+.margin-right
+  margin-right: margin-size !important
+
+.margin-top
+  margin-top: margin-size !important
+
+.margin-bottom
+  margin-bottom: margin-size !important
+
+.margin-hor
+  margin-bottom: margin-size !important
+  margin-top: margin-size !important
+
+.margin-vert
+  margin-left: margin-size !important
+  margin-top: margin-size !important
+
+.margin-l
+  margin: margin-size-l !important
+
+.margin-left-l
+  margin-left: margin-size-l !important
+
+.margin-right-l
+  margin-right: margin-size-l !important
+
+.margin-top-l
+  margin-top: margin-size-l !important
+
+.margin-bottom-l
+  margin-bottom: margin-size-l !important
+
+.margin-hor-l
+  margin-bottom: margin-size-l !important
+  margin-top: margin-size-l !important
+
+.margin-vert-l
+  margin-left: margin-size-l !important
+  margin-top: margin-size-l !important
+
+// Paddings
+
+.no-margin
+  margin: 0 !important
+
+.padding
+  padding: padding-size !important
+
+.padding-left
+  padding-left: padding-size !important
+
+.padding-right
+  padding-right: padding-size !important
+
+.padding-top
+  padding-top: padding-size !important
+
+.padding-bottom
+  padding-bottom: padding-size !important
+
+.padding-hor
+  padding-bottom: padding-size !important
+  padding-top: padding-size !important
+
+.padding-vert
+  padding-left: padding-size !important
+  padding-right: padding-size !important
+
+.padding-large
+  padding: padding-size-l !important
+
+.padding-large-left
+  padding-left: padding-size-l !important
+
+.padding-large-right
+  padding-right: padding-size-l !important
+
+.padding-large-top
+  padding-top: padding-size-l !important
+
+.padding-large-bottom
+  padding-bottom: padding-size-l !important
+
+.padding-hor-l
+  padding-bottom: padding-size-l !important
+  padding-top: padding-size-l !important
+
+.padding-vert-l
+  padding-left: padding-size-l !important
+  padding-right: padding-size-l !important
+
+// Displaing
+
+.wide
+  width: 100% !important
+
+.inline-block
+  display: inline-block !important
+
+.block
+  display: block !important
+
+.relative
+  position: relative !important
+
+.float-right
+  float: right
+
+.float-left
+  float: left
+
+// Scaffolding
+
+scaff-width=((100 - 11 * scaff-margin) / 12)
+
+.row
+  padding:0 !important
+  list-style: none outside !important
+  &::after
+    content:''
+    display:table
+  > *
+    float:left
+    margin:0
+    margin-left:scaff-margin
+    width:scaff-margin * 1%
+    &:first-child
+      margin-left:0
+
+  for n in (1..12)
+    .span-{n} { width: ((scaff-width * n) + (scaff-margin * (n - 1))) * 1% }
+
+  &.no-margin
+    > *
+      margin-left: 0
+    for n in (1..12)
+      .span-{n} { width: ((100/12 * n)) * 1% }
+
+
