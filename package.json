@@ -1,8 +1,14 @@
 {
-  "name": "skeletonJS",
+  "name": "verstack",
   "version": "0.0.1",
+  "description": "For quick preparation for work in static site. Site built in gulp and livereload.",
+  "author": "Nikita Shuklin",
   "bin": {
     "verstack": "bin/verstack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/clientochnaya/verstack"
   },
   "dependencies": {
     "nomnom": "*",
@@ -11,5 +17,6 @@
     "prompt": "*",
     "fs-extra": "*"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "license": "MIT"
 }

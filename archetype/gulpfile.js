@@ -35,7 +35,6 @@ gulp.task('jade', function() {
 
 gulp.task('js', function() {
   gulp.src(['./assets/static/js/**/*.js'])
-    .pipe(concat('index.js'))
     .pipe(gulp.dest('./site/static/js'))
     .pipe(webserver.reload());;
 });
