@@ -1,6 +1,6 @@
 {
   "name": "verstack",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "For quick preparation for work in static site. Site built in gulp and livereload.",
   "author": "Nikita Shuklin",
   "bin": {
