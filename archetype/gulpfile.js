@@ -1,5 +1,6 @@
 var gulp = require('gulp')
   , jade = require('gulp-jade')
+  , data = require('gulp-data')
   , stylus = require('gulp-stylus')
   , nib = require('nib')
   , concat = require('gulp-concat')
@@ -25,6 +26,9 @@ gulp.task('jade', function() {
   gulp.src(['./assets/views/**/*.jade',
             '!./assets/views/**/_*.jade',
             '!./assets/views/**/layout.jade'])
+    .pipe(data(function () {
+      return {staticUrl: '../static' }
+    }))
     .pipe(jade({
       pretty: true
     }))
