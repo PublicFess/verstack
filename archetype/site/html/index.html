@@ -2,12 +2,18 @@
 <html>
   <head>
     <title></title>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="../static/css/site.css">
+    <script type="text/javascript" src="../static/js/lib/angular.min.js"></script>
+    <script type="text/javascript" src="../static/js/lib/angular.ui-router.min.js"></script>
+    <script type="text/javascript" src="../static/js/index.js"></script>
+    <base href="/html/">
   </head>
-  <body>
+  <body ng-app="app">
     <h1>header</h1>
     <div class="columnLayout">
-      <h1>Привет Мир</h1>
+      <h1>Привет Мир</h1><a href="#" ui-sref="main"><span>main</span></a>
+      <ui-view></ui-view>
     </div>
     <h1>footer</h1>
   </body>

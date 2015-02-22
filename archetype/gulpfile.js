@@ -27,7 +27,10 @@ gulp.task('jade', function() {
             '!./assets/views/**/_*.jade',
             '!./assets/views/**/layout.jade'])
     .pipe(data(function () {
-      return {staticUrl: '../static' }
+      return {
+        staticUrl: '../static',
+        base: '/html/'
+      }
     }))
     .pipe(jade({
       pretty: true

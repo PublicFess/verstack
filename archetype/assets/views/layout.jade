@@ -2,8 +2,13 @@ doctype html
 html
   head
     title= title
+    meta(charset='utf-8')
     link(rel='stylesheet', href='#{staticUrl}/css/site.css')
-  body
+    script(type='text/javascript', src='#{staticUrl}/js/lib/angular.min.js')
+    script(type='text/javascript', src='#{staticUrl}/js/lib/angular.ui-router.min.js')
+    script(type='text/javascript', src='#{staticUrl}/js/index.js')
+    base(href='#{base}')
+  body(ng-app='app')
     include _header
     block content
     include _footer
