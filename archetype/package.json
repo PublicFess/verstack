@@ -10,7 +10,7 @@
     "gulp-data": "*",
     "gulp-stylus": "*",
     "nib":"*",
-    "gulp-concat": "*",
+    "gulp-uglify": "*",
     "gulp-imagemin": "*",
     "gulp-livereload": "*",
     "tiny-lr": "*",
