@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
+    "require-dir": "*",
     "gulp": "^3.8.10",
     "gulp-jade": "*",
     "gulp-data": "*",

@@ -29,4 +29,5 @@ node_modules/
 *.iws
 
 # Others
-tools/migration/communities/
+site/
+npm-debug.log
