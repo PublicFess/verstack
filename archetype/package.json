@@ -1,20 +1,20 @@
 {
-  "name": "<%= name %>",
-  "author": "<%= author %>",
   "version": "0.0.0",
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "require-dir": "*",
     "gulp": "^3.8.10",
-    "gulp-jade": "*",
+    "gulp-rimraf": "*",
+    "run-sequence": "*",
+    "gulp-connect": "*",
     "gulp-data": "*",
-    "gulp-stylus": "*",
-    "nib":"*",
-    "gulp-uglify": "*",
     "gulp-imagemin": "*",
+    "gulp-jade": "*",
     "gulp-livereload": "*",
-    "tiny-lr": "*",
-    "gulp-connect": "*"
+    "gulp-stylus": "*",
+    "gulp-uglify": "*",
+    "nib": "*",
+    "require-dir": "*",
+    "tiny-lr": "*"
   }
 }

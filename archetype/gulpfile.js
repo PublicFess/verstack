@@ -1,17 +1,19 @@
 var gulp = require('gulp')
-  , lr = require('tiny-lr')
-  , server = lr()
+  , server = require('tiny-lr')()
+  , runSequence = require('run-sequence')
   , requireDir = require('require-dir');
 
 requireDir('./gulp', { recurse: true });
 
-gulp.task('watch',
-  ['stylusWatch',
+gulp.task('watch', function () {
+  runSequence(
+    'clean',
+    'stylusWatch',
     'jadeWatch',
     'jsWatch',
     'imagesWatch',
     'fontsWatch',
-    'webserver'], function() {
+    'webserver'), function() {
     server.listen(9000, function(err) {
       if (err) return console.log(err);
       gulp.watch('assets/static/css/**/*.styl', ['stylusWatch']);
@@ -20,15 +22,18 @@ gulp.task('watch',
       gulp.watch('assets/static/img/**/*', ['imagesWatch']);
       gulp.watch('assets/static/fonts/**/*', ['imagesWatch']);
     });
+  }
+});
 
-  });
-
-gulp.task('build',
-  ['stylusBuild',
+gulp.task('build', function (cb) {
+  runSequence('clean',
+    'stylusBuild',
     'jadeBuild',
     'jsBuild',
     'imagesBuild',
-    'fontsBuild']);
+    'fontsBuild', cb);
+
+});
 
 
 
