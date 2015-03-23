@@ -30,4 +30,5 @@ node_modules/
 
 # Others
 site/
+build/
 npm-debug.log

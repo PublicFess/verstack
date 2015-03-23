@@ -7,34 +7,29 @@ requireDir('./gulp', { recurse: true });
 
 gulp.task('watch', function () {
   runSequence(
-    'clean',
+    'cleanWatch',
     'stylusWatch',
     'jadeWatch',
     'jsWatch',
     'imagesWatch',
     'fontsWatch',
-    'webserver'), function() {
-    server.listen(9000, function(err) {
-      if (err) return console.log(err);
-      gulp.watch('assets/static/css/**/*.styl', ['stylusWatch']);
-      gulp.watch('assets/views/**/*.jade', ['jadeWatch']);
-      gulp.watch('assets/static/js/**/*', ['jsWatch']);
-      gulp.watch('assets/static/img/**/*', ['imagesWatch']);
-      gulp.watch('assets/static/fonts/**/*', ['imagesWatch']);
-    });
-  }
+    'webserver', function() {
+      server.listen(9000, function(err) {
+        if (err) return console.log(err);
+        gulp.watch('assets/static/css/**/*.styl', ['stylusWatch']);
+        gulp.watch('assets/views/**/*.jade', ['jadeWatch']);
+        gulp.watch('assets/static/js/**/*', ['jsWatch']);
+        gulp.watch('assets/static/img/**/*', ['imagesWatch']);
+        gulp.watch('assets/static/fonts/**/*', ['imagesWatch']);
+      });
+    })
 });
 
 gulp.task('build', function (cb) {
-  runSequence('clean',
+  runSequence('cleanBuild',
     'stylusBuild',
     'jadeBuild',
     'jsBuild',
     'imagesBuild',
     'fontsBuild', cb);
-
 });
-
-
-
-gulp.task('default', ['build/jade']);

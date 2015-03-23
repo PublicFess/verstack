@@ -28,3 +28,7 @@ node_modules/
 *.ipr
 *.iml
 *.iws
+
+archetype/site/
+archetype/build/
+npm-debug.log

@@ -11,5 +11,5 @@ gulp.task('stylusBuild', function() {
       compress: true
     }))
     .on('error', console.log)
-    .pipe(gulp.dest('./site/static/css/'))
+    .pipe(gulp.dest('./build/static/css/'))
 });

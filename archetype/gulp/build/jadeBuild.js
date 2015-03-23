@@ -15,5 +15,5 @@ gulp.task('jadeBuild', function() {
     }))
     .pipe(jade())
     .on('error', console.log)
-    .pipe(gulp.dest('./site/html/'))
+    .pipe(gulp.dest('./build/html/'))
 });
