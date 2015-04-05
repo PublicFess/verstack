@@ -1,7 +1,7 @@
 var gulp = require('gulp')
   , jade = require('gulp-jade')
   , data = require('gulp-data')
-  , organizationId = require('../../package.json').name;
+  , organizationId = require(process.cwd() + '/verstack.json').name;
 
 module.exports = function () {
   return gulp.task('jadeBuild', function() {
