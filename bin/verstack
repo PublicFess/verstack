@@ -4,8 +4,13 @@
 var nomnom = require('nomnom');
 
 nomnom.command('init')
-  .help('Initialize the realm directory.')
   .callback(require('../lib/cmd/init'));
+
+nomnom.command('build')
+  .callback(require('../lib/cmd/build'));
+
+nomnom.command('watch')
+  .callback(require('../lib/cmd/watch'));
 
 nomnom.parse();
 
