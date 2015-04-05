@@ -28,7 +28,7 @@
     "gulp-uglify": "*",
     "nib": "*",
     "require-dir": "*",
-    "runSequence": "*"
+    "run-sequence": "*"
   },
   "devDependencies": {},
   "license": "MIT"
