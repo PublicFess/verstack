@@ -1,6 +1,6 @@
 {
   "name": "verstack",
-  "version": "0.0.13",
+  "version": "0.1.0",
   "description": "For quick preparation for work in static site. Site built in gulp and livereload.",
   "author": "Nikita Shuklin",
   "bin": {
@@ -15,7 +15,6 @@
     "prompt": "*",
     "async": "*",
     "underscore": "*",
-    "async": "*",
     "fs-extra": "*",
     "browser-sync": "*",
     "gulp": "^3.8.10",
