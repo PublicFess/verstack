@@ -19,7 +19,7 @@ gulp.task('build', function (cb) {
     'jsBuild',
     'imagesBuild',
     'miscBuild', cb);
-}); 
+});
 
 gulp.task('watch', function (cb) {
   runSequence(

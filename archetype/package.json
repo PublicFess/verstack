@@ -4,19 +4,5 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {},
-  "devDependencies": {
-    "gulp": "^3.8.10",
-    "gulp-rimraf": "*",
-    "run-sequence": "*",
-    "gulp-connect": "*",
-    "gulp-data": "*",
-    "gulp-imagemin": "*",
-    "gulp-jade": "*",
-    "gulp-livereload": "*",
-    "gulp-stylus": "*",
-    "gulp-uglify": "*",
-    "nib": "*",
-    "require-dir": "*",
-    "tiny-lr": "*"
-  }
+  "devDependencies": {}
 }
