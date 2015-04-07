@@ -1,5 +1,6 @@
 var gulp = require('gulp')
   , imagemin = require('gulp-imagemin')
+  , errorHandler = require('./errorHandler')()
   , reload = require('browser-sync').reload;
 
 gulp.task('imagesBuild', function() {
@@ -11,6 +12,7 @@ gulp.task('imagesBuild', function() {
 gulp.task('imagesWatch', function() {
   return gulp.src('./assets/static/img/**/*')
     .pipe(imagemin())
+    .on('error', errorHandler)
     .pipe(gulp.dest('./site/static/img'))
     .pipe(reload({stream:true}));
 });

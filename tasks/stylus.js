@@ -2,6 +2,7 @@ var gulp = require('gulp')
   , stylus = require('gulp-stylus')
   , autoprefixer = require('gulp-autoprefixer')
   , nib = require('nib')
+  , errorHandler = require('./errorHandler')()
   , reload = require('browser-sync').reload;
 
 gulp.task('stylusBuild', function() {
@@ -28,6 +29,7 @@ gulp.task('stylusWatch', function() {
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
     }))
+    .on('error', errorHandler)
     .pipe(gulp.dest('./site/static/css/'))
     .pipe(reload({stream:true}));
 });
