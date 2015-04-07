@@ -4,7 +4,7 @@ var gulp = require('gulp')
 gulp.task('webserver', function () {
   return webserver({
     server: {
-      baseDir: './site/html'
+      baseDir: './site'
     }
   });
 });
