@@ -34,6 +34,6 @@ gulp.task('watch', function (cb) {
       gulp.watch('assets/views/**/*.jade', ['jadeWatch']);
       gulp.watch('assets/static/js/**/*', ['jsWatch']);
       gulp.watch('assets/static/img/**/*', ['imagesWatch']);
-      gulp.watch('assets/static/mics/**/*', ['miscWatch']);
+      gulp.watch('assets/static/misc/**/*', ['miscWatch']);
     });
 });
