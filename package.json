@@ -1,14 +1,17 @@
 {
   "name": "verstack",
   "version": "0.2.7",
-  "description": "For quick preparation for work in static site. Site built in gulp and livereload.",
+  "description": "Tool for fast developing and building static sites with jade, stylus. This uses browser-sync for development mode.",
   "author": "Nikita Shuklin",
   "bin": {
     "verstack": "bin/verstack"
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/clientochnaya/verstack"
+    "url": "https://github.com/PublicFess/verstack"
+  },
+  "bugs": {
+    "url": "https://github.com/PublicFess/verstack/issues"
   },
   "dependencies": {
     "nomnom": "*",
