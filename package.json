@@ -30,7 +30,6 @@
     "gulp-stylus": "*",
     "gulp-uglify": "*",
     "nib": "*",
-    "require-dir": "*",
     "run-sequence": "*"
   },
   "devDependencies": {},

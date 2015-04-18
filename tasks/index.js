@@ -17,7 +17,6 @@ gulp.task('build', function (cb) {
     ['stylusBuild',
     'jadeBuild',
     'jsBuild',
-    'imagesBuild',
     'miscBuild'], cb);
 });
 
