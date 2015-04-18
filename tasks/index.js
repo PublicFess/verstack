@@ -14,21 +14,21 @@ require('./webserver');
 gulp.task('build', function (cb) {
   runSequence(
     'cleanBuild',
-    'stylusBuild',
+    ['stylusBuild',
     'jadeBuild',
     'jsBuild',
     'imagesBuild',
-    'miscBuild', cb);
+    'miscBuild'], cb);
 });
 
 gulp.task('watch', function (cb) {
   runSequence(
     'cleanWatch',
-    'stylusWatch',
+    ['stylusWatch',
     'jadeWatch',
     'jsWatch',
     'imagesWatch',
-    'miscWatch',
+    'miscWatch'],
     'webserver', function() {
       gulp.watch('assets/static/css/**/*.styl', ['stylusWatch']);
       gulp.watch('assets/views/**/*.jade', ['jadeWatch']);
