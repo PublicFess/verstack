@@ -1,6 +1,6 @@
 {
   "name": "verstack",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "description": "Tool for fast developing and building static sites with jade, stylus. This uses browser-sync for development mode.",
   "author": "Nikita Shuklin",
   "bin": {
