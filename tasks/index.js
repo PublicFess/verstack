@@ -15,23 +15,27 @@ gulp.task('build', function (cb) {
   runSequence(
     'cleanBuild',
     ['stylusBuild',
-    'jadeBuild',
-    'jsBuild',
-    'miscBuild'], cb);
+      'jadeBuild',
+      'jsBuild',
+      'jsLibsBuild',
+      'imagesBuild',
+      'miscBuild'], cb);
 });
 
 gulp.task('watch', function (cb) {
   runSequence(
     'cleanWatch',
     ['stylusWatch',
-    'jadeWatch',
-    'jsWatch',
-    'imagesWatch',
-    'miscWatch'],
+      'jadeWatch',
+      'jsWatch',
+      'jsLibsWatch',
+      'imagesWatch',
+      'miscWatch'],
     'webserver', function() {
       gulp.watch('assets/static/css/**/*.styl', ['stylusWatch']);
       gulp.watch('assets/views/**/*.jade', ['jadeWatch']);
       gulp.watch('assets/static/js/**/*', ['jsWatch']);
+      gulp.watch('assets/static/js/libs/*', ['jsLibsWatch']);
       gulp.watch('assets/static/img/**/*', ['imagesWatch']);
       gulp.watch('assets/static/misc/**/*', ['miscWatch']);
     });

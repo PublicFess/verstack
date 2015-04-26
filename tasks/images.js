@@ -8,3 +8,8 @@ gulp.task('imagesBuild', function() {
     .pipe(imagemin())
     .pipe(gulp.dest('./build/static/img'))
 });
+
+gulp.task('imagesWatch', function() {
+  return gulp.src('./assets/static/img/**/*')
+    .pipe(gulp.dest('./site/static/img'))
+});
