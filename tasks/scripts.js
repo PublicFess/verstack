@@ -4,7 +4,7 @@ var gulp = require('gulp')
   , reload = require('browser-sync').reload;
 
 gulp.task('jsBuild', function() {
-  return gulp.src('./assets/static/js/index.js')
+  return gulp.src('./assets/static/js/*.js')
     .pipe(browserify())
     .pipe(gulp.dest('./build/static/js'));
 });
@@ -15,7 +15,7 @@ gulp.task('jsLibsBuild', function() {
 });
 
 gulp.task('jsWatch', function() {
-  return gulp.src('./assets/static/js/index.js')
+  return gulp.src('./assets/static/js/*.js')
     .pipe(browserify())
     .on('error', errorHandler)
     .pipe(gulp.dest('./site/static/js'))
