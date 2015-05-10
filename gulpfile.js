@@ -11,15 +11,16 @@ gulp.task('watch', function () {
     'stylusWatch',
     'jadeWatch',
     'jsWatch',
+    'jsLibsWatch',
     'imagesWatch',
     'fontsWatch',
     'videosWatch',
     'webserver', function() {
     server.listen(9000, function(err) {
       if (err) return console.log(err);
-      gulp.watch('assets/static/css/**/*.styl', ['stylusWatch']);
+      gulp.watch('assets/static/css/**/*', ['stylusWatch']);
       gulp.watch('assets/views/**/*.jade', ['jadeWatch']);
-      gulp.watch('assets/static/js/**/*', ['jsWatch']);
+      gulp.watch('assets/static/js/**/*', ['jsWatch', 'jsLibsWatch']);
       gulp.watch('assets/static/img/**/*', ['imagesWatch']);
       gulp.watch('assets/static/fonts/**/*', ['imagesWatch']);
       gulp.watch('assets/static/videos/**/*', ['videosWatch']);
