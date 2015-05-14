@@ -9,8 +9,8 @@ nomnom.command('init')
 nomnom.command('build')
   .callback(require('../lib/cmd/build'));
 
-nomnom.command('watch')
-  .callback(require('../lib/cmd/watch'));
+nomnom.command('dev')
+  .callback(require('../lib/cmd/dev'));
 
 nomnom.parse();
 

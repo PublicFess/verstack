@@ -1,30 +1,18 @@
 'use strict';
 
 var gulp = require('gulp')
-  , runSequence = require('run-sequence')
   , webserver = require('browser-sync')
   , async = require('async')
   , chokidar = require('chokidar');
 
+require('./clean');
+require('./html');
+require('./css');
 require('./images');
-require('./jade');
 require('./scripts');
 require('./misc');
-require('./stylus');
-require('./clean');
 
-gulp.task('build', function (cb) {
-  runSequence(
-    'cleanBuild',
-    ['stylusBuild',
-      'jadeBuild',
-      'jsBuild',
-      'jsLibsBuild',
-      'imagesBuild',
-      'miscBuild'], cb);
-});
-
-gulp.task('watch:setWatchers', ['cleanWatch'], function (cb) {
+gulp.task('dev:setWatchers', ['dev:clean'], function (cb) {
   // css watcher
   var query = [];
   query.push(function (cb) {
@@ -34,7 +22,7 @@ gulp.task('watch:setWatchers', ['cleanWatch'], function (cb) {
         cb();
       })
       .on('all', function () {
-        gulp.start('stylusWatch');
+        gulp.start('dev:css');
       });
   });
 
@@ -46,7 +34,7 @@ gulp.task('watch:setWatchers', ['cleanWatch'], function (cb) {
         cb();
       })
       .on('all', function () {
-        gulp.start('jadeWatch');
+        gulp.start('dev:html');
       });
   });
   // js watcher
@@ -57,8 +45,8 @@ gulp.task('watch:setWatchers', ['cleanWatch'], function (cb) {
         cb();
       })
       .on('all', function () {
-        gulp.start('jsWatch');
-        gulp.start('jsLibsWatch');
+        gulp.start('dev:js');
+        gulp.start('dev:jsLibs');
       });
   });
   // img watcher
@@ -69,7 +57,7 @@ gulp.task('watch:setWatchers', ['cleanWatch'], function (cb) {
         cb();
       })
       .on('all', function () {
-        gulp.start('imagesWatch');
+        gulp.start('dev:images');
       });
   });
   // misc watcher
@@ -80,13 +68,13 @@ gulp.task('watch:setWatchers', ['cleanWatch'], function (cb) {
         cb();
       })
       .on('all', function () {
-        gulp.start('miscWatch');
+        gulp.start('dev:misc');
       });
   });
   async.parallel(query, cb)
 });
 
-gulp.task('webserver', ['watch:setWatchers'], function () {
+gulp.task('webserver', ['dev:setWatchers'], function () {
   return webserver({
     server: {
       baseDir: './site'
@@ -94,4 +82,4 @@ gulp.task('webserver', ['watch:setWatchers'], function () {
   });
 });
 
-gulp.task('watch', ['webserver']);
+gulp.task('dev', ['webserver']);
