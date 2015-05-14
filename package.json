@@ -1,6 +1,6 @@
 {
   "name": "verstack",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "description": "Tool for fast developing and building static sites with jade, stylus. This uses browser-sync for development mode.",
   "author": "Nikita Shuklin",
   "bin": {
@@ -30,7 +30,6 @@
     "gulp-stylus": "*",
     "gulp-uglify": "*",
     "nib": "*",
-    "async": "*",
     "chokidar": "*"
   },
   "devDependencies": {},
