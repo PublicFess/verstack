@@ -30,7 +30,8 @@
     "gulp-stylus": "*",
     "gulp-uglify": "*",
     "nib": "*",
-    "run-sequence": "*"
+    "async": "*",
+    "chokidar": "*"
   },
   "devDependencies": {},
   "license": "MIT"
