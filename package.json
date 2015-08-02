@@ -30,7 +30,7 @@
     "gulp-stylus": "*",
     "gulp-uglify": "*",
     "nib": "*",
-    "chokidar": "*"
+    "chokidar": "1.0.3"
   },
   "devDependencies": {},
   "license": "MIT"
